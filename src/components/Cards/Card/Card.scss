@@ -1,0 +1,56 @@
+@import "../../../App.scss";
+
+.Card {
+    position: relative;
+    width: 33.333%;
+    height: 100%;
+    overflow: hidden !important;
+    @media(max-width: $phone) {
+        width: 100vw;
+        height: 50vh;
+    }
+    .Card__title {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        padding: 30px;
+        color: #ffffff;
+        line-height: 1.6;
+        z-index: 2;
+        pointer-events: none;
+        p {
+            font-size: $small-font;
+            letter-spacing: 2px;
+            margin-bottom: 1vh;
+            opacity: .8;
+            @media(max-width: $phone) {
+                font-size: $small-font-phone;
+            }
+        }
+        strong {
+            font-size: $mid-font;
+            @media(max-width: $phone) {
+                font-size: $mid-font-phone;
+            }
+        }
+    }
+    .Card__img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 400ms ease-in-out;
+    }
+    &:hover {
+        .Card__img {
+            width: 110%;
+            height: 110%;
+            cursor: pointer;
+        }
+    } 
+}

@@ -1,0 +1,62 @@
+@import "../../App.scss";
+
+.Banner {
+    height: 50vh;
+    padding: 45px 160px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #ffffff;
+    @media(max-width: $phone) {
+        padding: 10vh 30px 5vh;
+    }
+    .Banner__title {
+        margin-bottom: 4vh;
+        font-size: $large-font;
+        font-weight: 700;
+        color: #ffffff;
+        line-height: 1.4;
+        mix-blend-mode: difference;
+        z-index: 10;
+        overflow: hidden;
+        @media(max-width: $phone) {
+            font-size: $large-font-phone;
+        }
+    }
+    .Banner__subtitle {
+        display: flex;
+        align-items: center;
+        color: #000000;
+        max-width: intrinsic; 
+        max-width: -moz-max-content;
+        cursor: pointer;
+        &:hover {
+            .Banner__arrow {
+                background: #000000;
+                color: #ffffff;
+            }
+        }
+        p {
+            margin-right: 1vw;
+            font-size: $small-font;
+            @media(max-width: $phone) {
+                font-size: $small-font-phone;
+                margin-right: 3vw;
+            }
+        }
+        .Banner__arrow {
+            border: 2px solid #000000;
+            border-radius: 50%;
+            padding: 12px;
+            height: 24px;
+            width: 24px;
+            transition: 400ms ease-in-out;
+            box-sizing: initial;
+            @media(max-width: $phone) {
+                padding: 4px;
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}

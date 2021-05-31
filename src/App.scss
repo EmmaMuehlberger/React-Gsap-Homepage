@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 1px;
+}
+
+$small-font: 24px;
+$mid-font: 36px;
+$large-font: 47px;
+$small-font-phone: 16px;
+$mid-font-phone: 21px;
+$large-font-phone: 21px;
+
+$phone: 700px;
