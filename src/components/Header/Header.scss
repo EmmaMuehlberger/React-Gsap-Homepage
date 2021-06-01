@@ -31,10 +31,12 @@
             span {
                 text-align: center;
                 background: #000000;
-                margin-bottom: 3px;
-                height: 3px;
+                height: 2px;
                 width: 100%;
                 display: block;
+                &:first-of-type {
+                    margin-bottom: 3px;
+                }
             }
         }
     }
