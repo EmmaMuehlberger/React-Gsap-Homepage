@@ -27,7 +27,7 @@ const Navigation = () => {
                 <div className="Navigation__contactGroup">
                     <h4>Headquarter</h4>
                     <li>Bachmattstraße 94</li>
-                    <li>8048 Zürich</li>
+                    <li>8048 Zurich</li>
                     <li>Switzerland</li>
                 </div>
                 <div className="Navigation__contactGroup clickable">

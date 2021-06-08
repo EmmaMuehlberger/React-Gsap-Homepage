@@ -33,6 +33,8 @@
         overflow: visible !important;
         .Header__menu-hamburger {
             width: 30px;
+            box-sizing: initial;
+            padding: 20px;
             span {
                 text-align: center;
                 background: #000000;
