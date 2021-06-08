@@ -1,0 +1,117 @@
+@import "../../App.scss";
+
+.Navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 150px 160px 0;
+    background: $yellow;
+    display: none;
+    justify-content: space-between;
+    @media(max-width: $phone) {
+        flex-direction: column;
+        justify-content: unset;
+        padding: 100px 30px 0;
+    }
+    .Navigation__column {
+        width: 50vw;
+        @media(max-width: $phone) {
+            width: 100%;
+            margin-bottom: 4vh;
+        }
+        p {
+            display: block;
+            width: 100%;
+            font-size: $small-font;
+            font-weight: 300;
+            @media(max-width: $phone) {
+                font-size: $small-font-phone;
+                margin-bottom: 2vh;
+            }
+        }
+        &:nth-child(1) li {
+            position: relative;
+            font-size: $large-font;
+            margin: 70px 0;
+            max-width:  intrinsic;        
+            max-width:  -moz-max-content;
+            overflow: visible !important;
+            cursor: pointer;
+            &:after {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 2px;
+                display: block;
+                margin-top: 5px;
+                right: 0;
+                background: $green;
+                transition: 400ms ease;
+            }
+            &:hover {
+                color: $green;
+                &:after {
+                  width: 100%;
+                  left: 0;
+                  background: $green;
+                }
+            }
+            @media(max-width: $phone) {
+                font-size: $large-font-phone;
+                margin: 20px 0;
+            }
+        }
+        &:nth-child(2) {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .Navigation__contactGroup {
+            width: 50%;
+            h4 {
+                font-size: $small-font;
+                font-weight: 700;
+                @media(max-width: $phone) {
+                    font-size: $small-font-phone;
+                }
+            }
+            li {
+                font-size: $small-font;
+                font-weight: 300;
+                margin: 20px 0;
+                @media(max-width: $phone) {
+                    font-size: $small-font-phone;
+                }
+            }
+        }
+        .Navigation__contactGroup.clickable li {
+            position: relative;
+            max-width:  intrinsic;        
+            max-width:  -moz-max-content;
+            overflow: visible !important;
+            cursor: pointer;
+            &:after {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 2px;
+                display: block;
+                margin-top: 5px;
+                right: 0;
+                background: $green;
+                transition: 400ms ease;
+            }
+            &:hover {
+                color: $green;
+                &:after {
+                  width: 100%;
+                  left: 0;
+                  background: $green;
+                }
+            }
+        }
+    }
+}

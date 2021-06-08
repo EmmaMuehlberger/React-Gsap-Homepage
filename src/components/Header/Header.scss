@@ -5,10 +5,12 @@
     top: 0;
     left: 0;
     width: 100vw;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 60px 160px 0;
+    overflow: visible !important;
     z-index: 4;
     @media(max-width: $phone) {
         padding: 40px 30px 0;
@@ -27,8 +29,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        .Header__hamburger {
-            width: 25px;
+        height: 100%;
+        overflow: visible !important;
+        .Header__menu-hamburger {
+            width: 30px;
             span {
                 text-align: center;
                 background: #000000;
@@ -37,6 +41,17 @@
                 display: block;
                 &:first-of-type {
                     margin-bottom: 3px;
+                }
+            }
+        }
+        .Header__menu-closed {
+            position: absolute;
+            display: block;
+            display: none;
+            svg {
+                width: 51px;
+                @media(max-width: $phone) {
+                    width: 36px;
                 }
             }
         }

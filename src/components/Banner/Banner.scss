@@ -2,7 +2,7 @@
 
 .Banner {
     height: 50vh;
-    padding: 45px 160px 0;
+    padding: 50px 160px 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -17,7 +17,7 @@
         color: #ffffff;
         line-height: 1.4;
         mix-blend-mode: difference;
-        z-index: 10;
+        z-index: 100;
         overflow: hidden;
         @media(max-width: $phone) {
             font-size: $large-font-phone;
@@ -53,7 +53,7 @@
             transition: 400ms ease-in-out;
             box-sizing: initial;
             @media(max-width: $phone) {
-                padding: 4px;
+                padding: 8px;
                 width: 16px;
                 height: 16px;
             }
